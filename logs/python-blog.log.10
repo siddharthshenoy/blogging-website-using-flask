@@ -1,0 +1,120 @@
+2021-04-11 15:36:46,798 ERROR: Exception on /register [POST] [in /home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1706, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 692, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: user
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/axolotl/OOAD_py_blog/python-blog/app/routes.py", line 77, in register
+    if form.validate_on_submit():
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask_wtf/form.py", line 100, in validate_on_submit
+    return self.is_submitted() and self.validate()
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/wtforms/form.py", line 318, in validate
+    return super(Form, self).validate(extra)
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/wtforms/form.py", line 150, in validate
+    if not field.validate(self, extra):
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/wtforms/fields/core.py", line 226, in validate
+    stop_validation = self._run_validation_chain(form, chain)
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/wtforms/fields/core.py", line 246, in _run_validation_chain
+    validator(form, self)
+  File "/home/axolotl/OOAD_py_blog/python-blog/app/forms.py", line 20, in validate_username
+    user = User.query.filter_by(username=username.data).first()
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 2736, in first
+    return self.limit(1)._iter().first()
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 2823, in _iter
+    execution_options={"_sa_orm_load_options": self.load_options},
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 1670, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1520, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 314, in _execute_on_connection
+    self, multiparams, params, execution_options
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1399, in _execute_clauseelement
+    cache_hit=cache_hit,
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1749, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1930, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1706, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 692, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: user
+[SQL: SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.about_me AS user_about_me, user.last_seen AS user_last_seen 
+FROM user 
+WHERE user.username = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('da', 1, 0)]
+(Background on this error at: http://sqlalche.me/e/14/e3q8)
+2021-04-11 15:37:43,484 INFO: python-blog startup [in /home/axolotl/OOAD_py_blog/python-blog/app/__init__.py:36]
+2021-04-11 15:37:47,657 INFO: python-blog startup [in /home/axolotl/OOAD_py_blog/python-blog/app/__init__.py:36]
+2021-04-11 15:58:10,402 INFO: python-blog startup [in /home/axolotl/OOAD_py_blog/python-blog/app/__init__.py:36]
+2021-04-11 15:58:13,778 ERROR: Exception on / [GET] [in /home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/axolotl/OOAD_py_blog/python-blog/app/routes.py", line 30, in index
+    posts = current_user.followed_posts().paginate(
+  File "/home/axolotl/OOAD_py_blog/python-blog/app/models.py", line 57, in followed_posts
+    followed = Post.query.join(followers, (followers.c.followed_id == Post.user_id)).filter(
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask_sqlalchemy/__init__.py", line 552, in __get__
+    return type.query_class(mapper, session=self.sa.session())
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask_whooshalchemy.py", line 48, in __init__
+    self._modelclass = self._mapper_zero().class_
+AttributeError: '_QueryProxy' object has no attribute '_mapper_zero'
+2021-04-11 15:58:18,676 ERROR: Exception on /index [GET] [in /home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/axolotl/OOAD_py_blog/python-blog/app/routes.py", line 30, in index
+    posts = current_user.followed_posts().paginate(
+  File "/home/axolotl/OOAD_py_blog/python-blog/app/models.py", line 57, in followed_posts
+    followed = Post.query.join(followers, (followers.c.followed_id == Post.user_id)).filter(
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask_sqlalchemy/__init__.py", line 552, in __get__
+    return type.query_class(mapper, session=self.sa.session())
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask_whooshalchemy.py", line 48, in __init__
+    self._modelclass = self._mapper_zero().class_
+AttributeError: '_QueryProxy' object has no attribute '_mapper_zero'
+2021-04-11 16:02:47,416 INFO: python-blog startup [in /home/axolotl/OOAD_py_blog/python-blog/app/__init__.py:36]

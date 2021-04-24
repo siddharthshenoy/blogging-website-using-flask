@@ -1,0 +1,14 @@
+flask_sqlalchemy
+flask_migrate
+flask_login
+flask_bootstrap
+flask_moment
+email_validator
+rollbar
+flask_wtf
+flask-msearch
+# when MSEARCH_BACKEND = "whoosh"
+whoosh
+blinker
+# when MSEARCH_BACKEND = "elasticsearch", only for 6.x.x
+elasticsearch==6.3.1

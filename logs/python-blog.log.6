@@ -1,0 +1,111 @@
+2021-04-11 16:18:07,707 ERROR: Exception on /search [GET] [in /home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/axolotl/OOAD_py_blog/python-blog/app/routes.py", line 189, in search
+    return render_template('search.html', form=form)
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/templating.py", line 140, in render_template
+    ctx.app,
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/home/axolotl/OOAD_py_blog/python-blog/app/templates/search.html", line 3, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "/home/axolotl/OOAD_py_blog/python-blog/app/templates/base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block "doc"
+    {%- block html %}
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block "html"
+    {% block body -%}
+  File "/home/axolotl/OOAD_py_blog/python-blog/app/templates/search.html", line 6, in block "body"
+    {{ wtf.quick_form(url_for('search'), form) }} # note: render_form is some marco from another .html file
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/wtf.html", line 200, in template
+    {{ form.hidden_tag() }}
+jinja2.exceptions.UndefinedError: 'str object' has no attribute 'hidden_tag'
+2021-04-11 16:18:25,946 ERROR: Exception on /search [GET] [in /home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/axolotl/OOAD_py_blog/python-blog/app/routes.py", line 189, in search
+    return render_template('search.html', form=form)
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/templating.py", line 140, in render_template
+    ctx.app,
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/home/axolotl/OOAD_py_blog/python-blog/app/templates/search.html", line 3, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "/home/axolotl/OOAD_py_blog/python-blog/app/templates/base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block "doc"
+    {%- block html %}
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block "html"
+    {% block body -%}
+  File "/home/axolotl/OOAD_py_blog/python-blog/app/templates/search.html", line 6, in block "body"
+    {{ wtf.quick_form(form) }} # note: render_form is some marco from another .html file
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/wtf.html", line 200, in template
+    {{ form.hidden_tag() }}
+jinja2.exceptions.UndefinedError: 'str object' has no attribute 'hidden_tag'
+2021-04-11 16:19:08,202 INFO: python-blog startup [in /home/axolotl/OOAD_py_blog/python-blog/app/__init__.py:36]
+2021-04-11 16:19:23,464 ERROR: Exception on /search_results/d [GET] [in /home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/axolotl/OOAD_py_blog/python-blog/app/routes.py", line 194, in search_results
+    results = Post.query.whoosh_search(query).all()
+AttributeError: 'BaseQuery' object has no attribute 'whoosh_search'
+2021-04-11 16:20:27,391 INFO: python-blog startup [in /home/axolotl/OOAD_py_blog/python-blog/app/__init__.py:36]

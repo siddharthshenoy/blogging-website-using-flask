@@ -1,0 +1,118 @@
+2021-04-19 18:33:42,942 ERROR: Exception on /edit_post/<Post dasdad> [GET] [in /home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/axolotl/OOAD_py_blog/python-blog/app/routes.py", line 146, in edit_post
+    form.post.data = post.body
+AttributeError: 'str' object has no attribute 'body'
+2021-04-19 18:46:59,584 INFO: python-blog startup [in /home/axolotl/OOAD_py_blog/python-blog/app/__init__.py:36]
+2021-04-19 19:00:59,960 INFO: python-blog startup [in /home/axolotl/OOAD_py_blog/python-blog/app/__init__.py:36]
+2021-04-19 19:04:30,860 INFO: python-blog startup [in /home/axolotl/OOAD_py_blog/python-blog/app/__init__.py:36]
+2021-04-19 19:13:56,108 INFO: python-blog startup [in /home/axolotl/OOAD_py_blog/python-blog/app/__init__.py:36]
+2021-04-19 19:13:59,406 ERROR: Exception on /edit_post/<Post dasdad> [GET] [in /home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/axolotl/OOAD_py_blog/python-blog/app/routes.py", line 139, in edit_post
+    form = EditPostForm(post)
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/wtforms/form.py", line 208, in __call__
+    return type.__call__(cls, *args, **kwargs)
+  File "/home/axolotl/OOAD_py_blog/python-blog/app/forms.py", line 59, in __init__
+    super(EditProfileForm, self).__init__(*args, **kwargs)
+TypeError: super(type, obj): obj must be an instance or subtype of type
+2021-04-19 19:14:14,907 INFO: python-blog startup [in /home/axolotl/OOAD_py_blog/python-blog/app/__init__.py:36]
+2021-04-19 19:14:20,391 ERROR: Exception on /edit_post/<Post dasdad> [POST] [in /home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/axolotl/OOAD_py_blog/python-blog/app/routes.py", line 141, in edit_post
+    tp = Post.query.filter_by(id = post.split("~")[1]).delete()
+IndexError: list index out of range
+2021-04-19 19:16:20,936 INFO: python-blog startup [in /home/axolotl/OOAD_py_blog/python-blog/app/__init__.py:36]
+2021-04-19 19:16:38,307 ERROR: Exception on /edit_post/<Post dasdad ~ 7> [POST] [in /home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/axolotl/OOAD_py_blog/python-blog/app/routes.py", line 147, in edit_post
+    return redirect(url_for('edit_post'))
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/helpers.py", line 370, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 2216, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/helpers.py", line 358, in url_for
+    endpoint, values, method=method, force_external=external
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/werkzeug/routing.py", line 2179, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'edit_post'. Did you forget to specify values ['post']?
+2021-04-19 19:17:30,585 INFO: python-blog startup [in /home/axolotl/OOAD_py_blog/python-blog/app/__init__.py:36]
+2021-04-19 19:18:44,902 INFO: python-blog startup [in /home/axolotl/OOAD_py_blog/python-blog/app/__init__.py:36]
+2021-04-19 19:18:55,081 ERROR: Exception on /edit_post/<Post idk anymore what do i do ~ 9> [POST] [in /home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/axolotl/OOAD_py_blog/python-blog/app/routes.py", line 142, in edit_post
+    db.session.remove(tp)
+TypeError: remove() takes 1 positional argument but 2 were given
+2021-04-19 20:20:45,166 INFO: python-blog startup [in /home/axolotl/OOAD_py_blog/python-blog/app/__init__.py:36]

@@ -1,0 +1,95 @@
+2021-04-11 16:13:31,639 ERROR: Exception on /index [GET] [in /home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/axolotl/OOAD_py_blog/python-blog/app/routes.py", line 46, in index
+    posts = current_user.followed_posts().paginate(
+  File "/home/axolotl/OOAD_py_blog/python-blog/app/models.py", line 57, in followed_posts
+    followed = Post.query.join(followers, (followers.c.followed_id == Post.user_id)).filter(
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask_sqlalchemy/__init__.py", line 552, in __get__
+    return type.query_class(mapper, session=self.sa.session())
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask_whooshalchemy.py", line 48, in __init__
+    self._modelclass = self._mapper_zero().class_
+AttributeError: '_QueryProxy' object has no attribute '_mapper_zero'
+2021-04-11 16:14:45,749 INFO: python-blog startup [in /home/axolotl/OOAD_py_blog/python-blog/app/__init__.py:36]
+2021-04-11 16:14:47,441 ERROR: Exception on / [GET] [in /home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/axolotl/OOAD_py_blog/python-blog/app/routes.py", line 46, in index
+    posts = current_user.followed_posts().paginate(
+  File "/home/axolotl/OOAD_py_blog/python-blog/app/models.py", line 57, in followed_posts
+    followed = Post.query.join(followers, (followers.c.followed_id == Post.user_id)).filter(
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask_sqlalchemy/__init__.py", line 552, in __get__
+    return type.query_class(mapper, session=self.sa.session())
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask_whooshalchemy.py", line 48, in __init__
+    self._modelclass = self._mapper_zero().class_
+AttributeError: '_QueryProxy' object has no attribute '_mapper_zero'
+2021-04-11 16:15:09,971 INFO: python-blog startup [in /home/axolotl/OOAD_py_blog/python-blog/app/__init__.py:36]
+2021-04-11 16:16:52,899 INFO: python-blog startup [in /home/axolotl/OOAD_py_blog/python-blog/app/__init__.py:36]
+2021-04-11 16:17:07,097 ERROR: Exception on /search [GET] [in /home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/axolotl/OOAD_py_blog/python-blog/app/routes.py", line 189, in search
+    return render_template('search.html', form=form)
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/templating.py", line 140, in render_template
+    ctx.app,
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/home/axolotl/OOAD_py_blog/python-blog/app/templates/search.html", line 2, in top-level template code
+    {% set page_title = 'Search' %}
+  File "/home/axolotl/OOAD_py_blog/python-blog/app/templates/base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block "doc"
+    {%- block html %}
+  File "/home/axolotl/OOAD_py_blog/python-blog/venv/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block "html"
+    {% block body -%}
+  File "/home/axolotl/OOAD_py_blog/python-blog/app/templates/search.html", line 5, in block "body"
+    {{ render_form(url_for('search'), form) }} # note: render_form is some marco from another .html file
+jinja2.exceptions.UndefinedError: 'render_form' is undefined
+2021-04-11 16:18:05,776 INFO: python-blog startup [in /home/axolotl/OOAD_py_blog/python-blog/app/__init__.py:36]

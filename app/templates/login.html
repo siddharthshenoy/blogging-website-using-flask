@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+{% block app_content %}
+<body>
+<style>
+    body {
+        background-image: url('https://i.pinimg.com/originals/24/33/c0/2433c0cf1ab7513c464f270619724425.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        }
+    .new {
+        background-color: white;
+        max-width: 180px;
+    }
+</style>
+    <h1>Sign In</h1>
+    <div class="row">
+        <div class="col-md-4">
+            {{ wtf.quick_form(form) }}
+        </div>
+    </div>
+    <br>
+    <p class="new">New User? <a href="{{ url_for('register') }}">Click to Register!</a></p>
+</body>
+{% endblock %}
